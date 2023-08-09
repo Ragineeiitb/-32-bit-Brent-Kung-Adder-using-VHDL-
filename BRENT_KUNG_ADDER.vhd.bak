@@ -1,0 +1,18 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use work.gates.all;
+entity brent_kung_adder is
+port(A,B: in std_logic_vector(31 downto 0);
+cin:in std_logic;
+sum:out std_logic_vector(31 downto 0);
+cout:out std_logic);
+end entity;
+
+architecture arch of brent_kung _adder is
+signal p0,g0:std_logic_vector(31 downto 0);
+signal p1,g1:std_logic_vector(15 downto 0);
+signal p2,g2:std_logic_vector(7 downto 0);
+signal p3,g3:std_logic_vector(3 downto 0);
+signal p4,g4:std_logic_vector(1 downto 0);
+signal carry:std_logic;
+signal p5,g5:std_logic;
